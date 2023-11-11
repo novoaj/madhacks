@@ -1,36 +1,29 @@
-import React, { useState, useEffect } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+//import { StyleSheet } from "react-native";
 
-function App() {
-  const [currentTime, setCurrentTime] = useState(0);
+const DropdownMenu = () => {
+  const [selectedOption, setSelectedOption] = useState(null);
+  const options = ['Workout 1', 'Workout 2', 'Workout 3'];
 
-  useEffect(() => {
-    const url = "/time";
-    fetch(url, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        "Accept": "application/json"
-      }
-    })
-      .then(res=> {
-        console.log(res);
-        return res.json()
-      })
-      .then(data=> {
-        setCurrentTime(data.time);
-        console.log(data)
-      })
-  }, [])
+  const handleOptionSelect = (option) => {
+    setSelectedOption(option);
+  };
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>{currentTime}.</p>
-      </header>
+    <div>
+      <h2>Welcome to WorkoutAThon: {selectedOption}</h2>
+      <select onChange={(e) => handleOptionSelect(e.target.value)}>
+        <option value="" disabled selected>
+          Select a Workout 
+        </option>
+        {options.map((option, index) => (
+          <option key={index} value={option}>
+            {option}
+          </option>
+        ))}
+      </select>
     </div>
   );
-}
+};
 
-export default App;
+export default DropdownMenu;
