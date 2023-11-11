@@ -22,13 +22,9 @@ def get_exercises():
     url = "https://api-ninjas.com/api/exercises?type=cardio"
     response = requests.get(url, headers={'X-Api-Key': API_NINJAS_KEY})
     if response.status_code == 200:
+        data = response.json()
         return jsonify(
-        {
-            "name": response["name"],
-            "type": response["type"],
-            "difficulty": response["difficulty"],
-            "instructions": response["instructions"]
-            }
+        data
         )
     else: 
         return jsonify(
