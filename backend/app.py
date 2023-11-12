@@ -44,8 +44,11 @@ def get_exercises():
     type_of_exercise = request.args.get("type", default="strength")
     difficulty = request.args.get("difficulty", default="beginner")
     print(type_of_exercise, difficulty)
+    url = f"https://api.api-ninjas.com/v1/exercises?type={type_of_exercise}"
+    if difficulty.lower() != "any":
+        url = f"https://api.api-ninjas.com/v1/exercises?type={type_of_exercise}&difficulty={difficulty}"
     # url = "https://api-ninjas.com/api/exercises" # type=cardio" # this url is just doing html from this hardcoded webpage
-    url = f"https://api.api-ninjas.com/v1/exercises?type={type_of_exercise}&difficulty={difficulty}"
+    
     response = requests.get(url, headers={'X-Api-Key': API_NINJAS_KEY})
 
     response.raise_for_status()
