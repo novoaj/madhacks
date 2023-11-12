@@ -6,10 +6,9 @@ import Navbar from './components/navbar';
 function SignUp() {
   return (
     <div>
-      <Navbar />
       <div>
         <h1>
-          
+          Hello
         </h1>
       </div>
       </div>
