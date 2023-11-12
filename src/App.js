@@ -1,12 +1,13 @@
-import React from 'react';
+import {React} from 'react';
 import './App.css'; // Import your CSS file
 import Navbar from './components/navbar';
+
 
 function App() {
   return (
     <div>
       <Navbar />
-      <div class="Home">
+      <div className="Home">
         <h1>Hello</h1>
       </div>
     </div>
