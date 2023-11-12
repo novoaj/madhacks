@@ -23,7 +23,7 @@ const NavigationBar = () => {
       } , [])
   return (
     <>
-        <Navbar expand="lg">
+        <Navbar>
             <Container id="hello">
                     <Navbar.Brand href="/">
                         <img
@@ -34,6 +34,8 @@ const NavigationBar = () => {
                             className="d-inline-block align-top"
                         />
                     </Navbar.Brand>
+                    
+                
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="links">
                         <Nav.Link id="primary">
@@ -46,6 +48,8 @@ const NavigationBar = () => {
                 </Navbar.Collapse>
             </Container>
         </Navbar>
+
+
     </>
   );
 };
