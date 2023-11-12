@@ -1,0 +1,73 @@
+nav {
+    margin-left: 0%;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .navItems {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex; /* Use flex to arrange items horizontally */
+    margin: 0%;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  #Home {
+    margin-left: 1%;
+    margin-right: 8%;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  #Programs {
+    margin-top: 12.5%;
+    margin-left: 50%;
+    font-size: 120%;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  #Build {
+    margin-top: 12.5%;
+    margin-left: 50%;
+    font-size: 120%;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  #Community {
+    margin-top: 12.5%;
+    margin-left: 50%;
+    font-size: 120%;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  #Login {
+    margin-top: 1.9%;
+    margin-left: 50%;
+    margin-right: 5%;
+    font-size: 120%;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+    margin-right: 1%;
+  }
+  
+  .container {
+    background-color: rgb(255, 255, 255);
+    margin-top:1.9%;
+    padding-bottom: -5;
+  }
+  
+  #SignUp {
+    margin-top: 1.9%;
+    margin-left: 2.5%;
+    padding: 5%;
+    font-size: 120%;
+    font-weight: bold;
+    color: white;
+    border-radius: 4px;
+  }
+  
+  * {
+    background-color: rgb(92, 91, 91);
+  }
+  

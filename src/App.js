@@ -1,8 +1,75 @@
-import React, { useState, useEffect } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './App.css'; // Import your CSS file
+import Navbar from './components/navbar';
 
 function App() {
+  return (
+    <div>
+      <Navbar />
+      <div class="Home">
+        <h1>Hello</h1>
+      </div>
+    </div>
+    
+  )
+}
+
+export default App;
+
+
+
+
+
+
+
+/*
+const styles = {
+  buttons: {
+    display: 'flex',
+    justifyContent: 'center',
+    color: 'white',
+    padding: '10px',
+    margin: '5px',
+    cursor: 'pointer',
+  }
+};
+
+const App = () => {
+  const buttonNames = ['Upper Body', 'Lower Body', 'Cardio'];
+
+  const title = () => {
+    return (
+      <nav>
+        <img></img>
+        <h2 id="Home">Home</h2>
+
+        <div class="navItems">
+          <btn id="Programs">Programs</btn>
+          <btn id="Build">Build</btn>
+          <btn id="Community">Community</btn>
+        </div>
+
+        <btn id="Login">Log in</btn>
+        
+        <div class="container">
+          <btn id="SignUp">Sign Up</btn>
+        </div>
+      </nav>
+    );
+  };
+
+  
+
+  return (
+    <div>
+      {title()}
+    </div>
+  );
+};
+
+export default App; */
+
+/*function App() {
   const [currentTime, setCurrentTime] = useState(0);
 
   useEffect(() => {
@@ -33,4 +100,4 @@ function App() {
   );
 }
 
-export default App;
+export default App; */
