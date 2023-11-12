@@ -73,7 +73,7 @@
   */
 
  #hello {
-    background-color: #3498db; 
+    background-color: #0033ff; 
     padding: 15px 5px 5px; 
     padding-top: 1%;
     margin-top: 0%;
@@ -90,8 +90,7 @@
   /* Navbar links styling */
   .navbar-nav .nav-link {
     color: #ffffff; 
-    font-size: 18px; 
-    margin-right: 20px; 
+    font-size: 18px;
     text-decoration: none;
   }
   
@@ -104,6 +103,35 @@
   /* Button styling */
   .navbar-btn {
     margin-left: 15px; 
+  }
+  
+  #hello {
+    display: inline-flex;
+  }
+
+  .links {
+    text-align: inline;
+  }
+
+  #primary {
+    margin-bottom: 75%;
+    margin-left: 450%;
+    margin-right: 50%;
+  }
+
+  #secondary {
+    margin-left: 10%;
+    text-align: inline;
+    white-space: nowrap;
+  }
+
+  #appLogo {
+    width: 300px;
+    margin-right: 5%;
+  }
+
+  .links {
+    margin-top: 20%;
   }
 
   

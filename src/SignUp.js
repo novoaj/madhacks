@@ -3,16 +3,21 @@ import './App.css'; // Import your CSS file
 import Navbar from './components/navbar';
 
 
-function App() {
+function SignUp() {
   return (
     <div>
       <Navbar />
-    </div>
+      <div>
+        <h1>
+          
+        </h1>
+      </div>
+      </div>
     
   )
 }
 
-export default App;
+export default SignUp;
 
 
 
