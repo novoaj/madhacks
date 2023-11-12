@@ -1,12 +1,14 @@
 import {React} from 'react';
 import './App.css'; // Import your CSS file
 import Navbar from './components/navbar';
+import Content from "./components/Content";
 
 
 function App() {
   return (
     <div>
       <Navbar />
+      <Content />
       </div>
     
   )
