@@ -51,7 +51,7 @@ def get_exercises():
         # parse the data in a different way
         print(type(data))
         return jsonify(
-        data[0]
+            data
         )
     else: 
         return jsonify(
