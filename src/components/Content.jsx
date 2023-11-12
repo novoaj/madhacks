@@ -4,26 +4,50 @@ import DropdownForm from "./DropdownForm"
 import Workout from "./Workout"
 
 function Content(props){
-    const [workoutType, setWorkoutType] = useState([]);
+    const [type, setType] = useState("strength");
+    const [muscle, setMuscle] = useState("biceps");
+    const [difficulty, setDifficulty] = useState("beginner");
     const [workouts, setWorkouts] = useState([]);
     // fetch api stuff from backend
-    useEffect(() =>{
-        fetch("/get-exercises", {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-          }
-        })
-          .then(res => res.json())
-          .then(data=> {
-            console.log(data) // set workouts
-            setWorkouts(data)
+    const fetchData = async () => {
+        fetch(`/get-exercises?type=${type}&difficulty=${difficulty}`, {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+              "Accept": "application/json"
+            }
           })
-      } , [])
+            .then(res => res.json())
+            .then(data=> {
+              console.log(data) // set workouts
+              setWorkouts(data)
+            })
+    }
+    // useEffect(() =>{
+    //     fetch("/get-exercises", {
+    //       method: "GET",
+    //       headers: {
+    //         "Content-Type": "application/json",
+    //         "Accept": "application/json"
+    //       }
+    //     })
+    //       .then(res => res.json())
+    //       .then(data=> {
+    //         console.log(data) // set workouts
+    //         setWorkouts(data)
+    //       })
+    //   } , [])
 
+    useEffect(() => {
+        fetchData();
+    }, [muscle, type, difficulty])
+    
     function handleClick(){
-        
+        fetchData();
+    }
+
+    const handleDropdownChange = (type_value) => {
+        setType(type_value)
     }
     
     return (
@@ -35,7 +59,7 @@ function Content(props){
                         <Form.Label>
                             Type of workout:
                         </Form.Label>
-                        <DropdownForm/>
+                        <DropdownForm onDropdownChange = {handleDropdownChange}/>
                     </Form.Group>
                 </Form>
                 <Button onClick={handleClick}>

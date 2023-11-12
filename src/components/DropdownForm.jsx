@@ -2,11 +2,12 @@ import React, {useState} from "react";
 
 
 function DropdownForm(props){
-    const options = ["cardio", "strength"]
+    const options = ["Strength", "Cardio"]
     const [selected, setSelected] = useState(options[0]);
 
     const handleChange = (e) => {
         setSelected(e.target.value);
+        props.onDropdownChange(e.target.value);
     }
     return (
         <form>
