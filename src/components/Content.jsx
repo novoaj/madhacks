@@ -81,7 +81,7 @@ function Content(props){
             </Row>
             <br/>
             <hr/>
-            <Row>
+            <Row style={{ paddingTop: '2rem', paddingBottom: '30rem' }}>
             {workouts.length === 0 ? 
                 <div className="text-center">
                     No results!
