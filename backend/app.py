@@ -1,5 +1,5 @@
 import time
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 import requests
 import re
 from bs4 import BeautifulSoup
@@ -40,15 +40,18 @@ should return a JSON object with exercises
 """
 @app.route("/get-exercises", methods=["GET"])
 def get_exercises():
-    muscle = "biceps" # allow user to specify on frontend?
-    type_of_exercise = "cardio"
-    url = "https://api-ninjas.com/api/exercises?type=cardio"
+    # muscle = request.args.get("muscle", default = "biceps")
+    type_of_exercise = request.args.get("type", default="strength")
+    difficulty = request.args.get("difficulty", default="beginner")
+    print(type_of_exercise, difficulty)
+    # url = "https://api-ninjas.com/api/exercises" # type=cardio" # this url is just doing html from this hardcoded webpage
+    url = f"https://api.api-ninjas.com/v1/exercises?type={type_of_exercise}&difficulty={difficulty}"
     response = requests.get(url, headers={'X-Api-Key': API_NINJAS_KEY})
 
     response.raise_for_status()
     if response.status_code == 200:
-        data = parse_html_response(response)
-        # parse the data in a different way
+        # data = parse_html_response(response)
+        data = response.json()
         print(type(data))
         return jsonify(
             data
