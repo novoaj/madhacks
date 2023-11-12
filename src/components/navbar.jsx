@@ -1,7 +1,7 @@
 
 import React, {useEffect, useState} from 'react';
 import "./navbar.css";
-import {Button} from "react-bootstrap";
+import {Button, Container, Nav, Navbar, NavbarBrand, NavbarCollapse, NavItem} from "react-bootstrap";
 
 
 
@@ -20,22 +20,39 @@ const NavigationBar = () => {
           })
       } , [])
   return (
-    <nav className="navigationBar">
-      <img src="" alt="Logo" /> {/* Add your image source */}
-      <h2 id="Home">WorkoutAThon</h2>
+    // <nav className="navigationBar">
+    //   <img src="" alt="Logo" /> {/* Add your image source */}
+    //   <h2 id="Home">WorkoutAThon</h2>
 
-      <div className="navItems">
-        <Button>primary</Button>
-        <button id="Build">Build</button>
-        <button id="Community">Community</button>
-      </div>
+    //   <div className="navItems">
+    //     <Button>primary</Button>
+    //     <Button>Build</Button>
+    //     <Button>Community</Button>
+    //   </div>
 
-      <button id="Login">Log in</button>
+    //   <button id="Login">Log in</button>
 
-      <div className="container">
-        <button id="SignUp">Sign Up</button>
-      </div>
-    </nav>
+    //   <div className="container">
+    //     <Button>Sign Up</Button>
+    //   </div>
+    // </nav>
+    <>
+        <Navbar expand="lg">
+            <Container id="hello">
+                <NavbarBrand href="/">Home</NavbarBrand>
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="mr-auto">
+                        <Nav.Link id="primary">
+                            primary
+                        </Nav.Link>
+                        <Nav.Link id="secondary">
+                            secondary
+                        </Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
+    </>
   );
 };
 
