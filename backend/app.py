@@ -4,7 +4,7 @@ import requests
 import re
 from bs4 import BeautifulSoup
 
-API_NINJAS_KEY = "R81jW6DVPvXpNQViXsr7QQ==KVthtd2jriW2EP2u"
+API_NINJAS_KEY = "API_KEY_HERE"
 app = Flask(__name__)
 
 """
