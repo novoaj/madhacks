@@ -51,21 +51,21 @@ function Content(props){
     }
     
     return (
-        <>
         <Container fluid>
-            <Row>
-                <Form className="align-items-center">
-                    <Form.Group className="mb-3" controlId = "my-form">
-                        <Form.Label>
-                            Type of workout:
-                        </Form.Label>
-                        <DropdownForm onDropdownChange = {handleDropdownChange}/>
-                    </Form.Group>
-                </Form>
-                <Button onClick={handleClick}>
-                        Generate Workout
-                </Button>
-                
+            <Row className="pt-5">
+                <Col>
+                    <div className="align-items-center">
+                        <Form.Group className="m-3" controlId = "my-form">
+                            <Form.Label>
+                                Type of workout:
+                            </Form.Label>
+                            <DropdownForm onDropdownChange = {handleDropdownChange}/>
+                        </Form.Group>
+                    </div>
+                    <Button onClick={handleClick}>
+                            Generate Workout
+                    </Button>
+                </Col>   
             </Row>
             <br/>
             <hr/>
@@ -78,7 +78,6 @@ function Content(props){
             ))}
             </Row>
         </Container>
-        </>
         
     )
 }

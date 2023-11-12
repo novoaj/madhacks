@@ -2,12 +2,13 @@ import {React} from 'react';
 import './App.css'; // Import your CSS file
 import Navbar from './components/navbar';
 import Content from "./components/Content";
-
+import NewNavbar from "./components/NewNavbar";
 
 function App() {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
+      <NewNavbar/>
       <Content />
       </div>
     
