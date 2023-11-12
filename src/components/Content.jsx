@@ -53,19 +53,21 @@ function Content(props){
     const handleDifficultyChange = (difficulty_value) => {
         setDifficulty(difficulty_value);
     }
-    
+ 
     return (
-        <Container fluid>
+        <Container fluid style={{backgroundColor: "#F5F5F5"}}>
             <Row className="pt-5">
-                <Col>
+                <Col lg={3} xl = {3}>
+                </Col>
+                <Col lg={6} sm={12} xs={12} xl = {6}>
                     <div className="align-items-center">
                         <Form.Group className="m-3" controlId = "my-form">
                             <Form.Label>
-                                Type of workout:
+                                Type of Workout:
                             </Form.Label>
                             <DropdownForm onDropdownChange = {handleDropdownChange}/>
                             <Form.Label>
-                                Difficulty
+                                Difficulty:
                             </Form.Label>
                             <DifficultyDropdown onDifficultyChange = {handleDifficultyChange}/>
                         </Form.Group>
@@ -74,14 +76,16 @@ function Content(props){
                             Generate Workout
                     </Button> */}
                 </Col>   
+                <Col lg={3} xl={3}>
+                </Col>
             </Row>
             <br/>
             <hr/>
             <Row>
             {workouts.length === 0 ? 
-                <>
+                <div className="text-center">
                     No results!
-                </> : 
+                </div> : 
                 <>
                     {workouts.map((workout, index) => (
                     <Col xs = {12} s = {6} md = {4} lg = {3} xl = {2} key={index} >

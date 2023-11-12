@@ -3,7 +3,7 @@ import {Form} from "react-bootstrap";
 
 
 function DropdownForm(props){
-    const options = ["Strength", "Cardio"]
+    const options = ["Strength", "Cardio", "Powerlifting", "Plyometrics", "Stretching"]
     const [selected, setSelected] = useState(options[0]);
 
     const handleChange = (e) => {
@@ -12,7 +12,7 @@ function DropdownForm(props){
     }
     return (
         <Form>
-            <select 
+            <Form.Select 
                 value={selected}
                 onChange={handleChange}>
                 {options.map((option, index) => 
@@ -20,7 +20,7 @@ function DropdownForm(props){
                     {option}
                 </option>
                 )}
-            </select>
+            </Form.Select>
         </Form>
     )
 }
