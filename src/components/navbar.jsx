@@ -2,6 +2,8 @@
 import React, {useEffect, useState} from 'react';
 import "./navbar.css";
 import {Button, Container, Nav, Navbar, NavbarBrand, NavbarCollapse, NavItem} from "react-bootstrap";
+import AppLogo from "./AppLogo.png";
+
 
 
 
@@ -20,33 +22,25 @@ const NavigationBar = () => {
           })
       } , [])
   return (
-    // <nav className="navigationBar">
-    //   <img src="" alt="Logo" /> {/* Add your image source */}
-    //   <h2 id="Home">WorkoutAThon</h2>
-
-    //   <div className="navItems">
-    //     <Button>primary</Button>
-    //     <Button>Build</Button>
-    //     <Button>Community</Button>
-    //   </div>
-
-    //   <button id="Login">Log in</button>
-
-    //   <div className="container">
-    //     <Button>Sign Up</Button>
-    //   </div>
-    // </nav>
     <>
         <Navbar expand="lg">
             <Container id="hello">
-                <NavbarBrand href="/">Home</NavbarBrand>
+                    <Navbar.Brand href="/">
+                        <img
+                            src={AppLogo}
+                            alt="AppLogo"
+                            id="appLogo"
+                            height="80" // Set the height of the image as needed
+                            className="d-inline-block align-top"
+                        />
+                    </Navbar.Brand>
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="mr-auto">
+                    <Nav className="links">
                         <Nav.Link id="primary">
-                            primary
+                            Primary
                         </Nav.Link>
-                        <Nav.Link id="secondary">
-                            secondary
+                        <Nav.Link id="secondary" href="/SignUp.js/">
+                            Sign Up
                         </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>

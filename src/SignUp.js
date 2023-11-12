@@ -1,20 +1,23 @@
 import {React} from 'react';
 import './App.css'; // Import your CSS file
 import Navbar from './components/navbar';
-import Content from "./components/Content";
 
 
-function App() {
+function SignUp() {
   return (
     <div>
       <Navbar />
-      <Content></Content>
+      <div>
+        <h1>
+          
+        </h1>
+      </div>
       </div>
     
   )
 }
 
-export default App;
+export default SignUp;
 
 
 
