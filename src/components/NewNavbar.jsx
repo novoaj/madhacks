@@ -5,12 +5,19 @@ import AppLogo from "./AppLogo.png";
 function NewNavbar() {
     const style = {
         // background color 0033FF
-        backgroundColor: "#0033FF"
+        backgroundColor: "#0033FF",
+        borderRadius: "0px 0 0 10px",
+        paddingLeft: "40px",
+        boxShadow: "0px 2px 15px rgba(0,0,0,0.5)"
+    }
+    const navStyle = {
+        borderRadius: "30px 0 0 30px",
+        paddingLeft: "40px"
     }
     return (
         <Navbar style={style} variant="dark" >
-            <Container>
-                <Nav>
+            <Container >
+                <Nav className="ml-auto">
                     <Navbar.Brand href="/">
                         <img
                             src={AppLogo}
@@ -20,9 +27,9 @@ function NewNavbar() {
                         />
                     </Navbar.Brand>
                     <Navbar.Collapse>
-                        <Nav>
+                        <Nav className="justify-content-end">
                             <Nav.Link>
-                                Primary
+                                Login
                             </Nav.Link>
                             <Nav.Link href="/SignUp.js/">
                                 Sign Up
