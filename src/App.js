@@ -4,6 +4,8 @@ import Navbar from './components/navbar';
 import Content from "./components/Content";
 import NewNavbar from "./components/NewNavbar";
 
+// To run on windows, type flask run --port 8000 in flask backend, then Yarn Start in node
+
 function App() {
   return (
     <div>
